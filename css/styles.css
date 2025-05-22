@@ -24,6 +24,11 @@ p {
     font-size: 1.6rem;
 }
 
+ul {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+}
+
 nav {
     margin-bottom: 120px;
 }

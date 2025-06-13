@@ -24,9 +24,9 @@ p {
     font-size: 1.6rem;
 }
 
-ul {
+.index-ul {
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 
 nav {
@@ -118,4 +118,19 @@ img.dibley {
 h1 {
   position: relative;
   margin: auto;
+}
+
+.about-h1 {
+  position: relative;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.about-img {
+  margin-bottom: 1rem;
+}
+.about-p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    color: black;
 }

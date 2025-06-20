@@ -3,19 +3,23 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="See an example of a Bootstrap 5 image carousel, an example of Jim Leahy's work in front-end development.">
+    <meta name="author" content="Jim Leahy">
     <title>Carousel: Jim Leahy</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/styles.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
+<a href="#main" class="visually-hidden-focusable">Skip to main content</a>
+
+<!-- Navigation bar -->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="#">Jim Leahy</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
@@ -26,66 +30,96 @@
             <li class="nav-item">
                 <a class="nav-link" href="grid.html">Grid</a>
             </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="carousel.html">Carousel</a>
+            <li class="nav-item">
+                <a class="nav-link active" href="carousel.html" aria-current="page">Carousel</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript.html">Javascript</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
             </li>
         </ul>
     </div>
 </nav>
 
-<main role="main" class="container-fluid">
-    <h2>Carousel</h2>
-<!--Add carousel here-->
-<div id="carouselExampleCaptions" class="carousel slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+<!-- Main container with flex setup to keep nav and footer anchored in place-->
+<main id="main" role="main" class="container-fluid flex-grow-1">
+
+  <!-- Carousel wrapper to keep contents alighned as page width increases -->
+  <div class="carousel-wrapper">
+   <h1 class="carousel-title">Carousel</h1>
+   <p class="carousel-paragraph">This image carousel is built using Bootstrap components. Bootstrap is designed specifically to be mobile-friendly and is generally optimized for responsive content display. Even so, there are times where Bootstrap components need adjustment. This carousel is no different.</p>
+   <p class="carousel-paragraph">The carousel images are my own. I had as much fun making the pizzas as I did creating this carousel!</p>
+   <h2 class="carousel-subtitle">Responsive Design in an Image Carousel</h2>
+   
+   <!-- Image carousel -->
+   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" tabindex="0">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/olive-and-ricotta-pizza.webp" class="d-block w-100" alt="Photo of an olive and ricotta cheese pizza.">
+          <div class="carousel-caption d-block">
+            <h3>Olive & Ricotta Pizza</h3>
+            <p>Olive, onion, & red pepper pizza w/ricotta.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img loading="lazy" src="images/sausage-onion-pizza.webp" class="d-block w-100" alt="Photo of sausage and onion pizza.">
+          <div class="carousel-caption d-block">
+            <h3>Sausage & Onion Pizza</h3>
+            <p>Sausage, onion, & scallion pizza.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img loading="lazy" src="images/winter-pizza.webp" class="d-block w-100" alt="Photo of a pizza being cooked in a propane oven outside in the winter.">
+          <div class="carousel-caption d-block">
+            <h3>Winter Pizza</h3>
+            <p>Olive, pepper, & onion pizza tastes great, even in the snowy outdoors.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img loading="lazy" src="images/pepperoni-pan-pizza.webp" class="d-block w-100" alt="Photo of a pepperoni pizza inside a cast iron pan.">
+          <div class="carousel-caption d-block">
+            <h4>Pepperoni Pan Pizza</h4>
+            <p>Pepperoni cast iron pan pizza. Caramalized cheese crust required.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <p class="carousel-paragraph">When designing page contents, it's critical to view and test your pages on a variety of screen sizes or browser viewports. In early testing of this carousel, the text content on the images would disappear at smaller window sizes. The carousel here is a default bootstrap component and required some adjustment to allow for visibility on smaller viewports. As you resize this window on a desktop, you can see some of the breakpoints, and at smaller widths, the text would disappear. Adjusting some styles and classes for these carousel items preserved text visibility. I also reduced the text size on smaller viewports, allowing it fit better on smaller screens.</p>
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="images/olive-and-ricotta-pizza.jpg" class="d-block w-100" alt="Photo of an olive and ricotta cheese pizza.">
-      <div class="carousel-caption d-none d-md-block">
-        <h4>Olive & Ricotta Pizza</h4>
-        <p>Olive, onion, & red pepper pizza w/ricotta.</p>
+</main>
+
+<!-- Footer -->
+<footer class="footer mt-auto py-4 w-100">
+  <div class="container text-center text-md-start">
+    <div class="row">
+      <div class="col-md-6 mb-2 mb-md-0">
+        © 2025 Jim Leahy
       </div>
-    </div>
-    <div class="carousel-item">
-      <img src="images/sausage-onion-pizza.jpg" class="d-block w-100" alt="Photo of sausage and onion pizza.">
-      <div class="carousel-caption d-none d-md-block">
-        <h4>Sausage & Onion Pizza</h4>
-        <p>Sausage, onion, & scallion pizza.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="images/winter-pizza.jpg" class="d-block w-100" alt="Photo of a pizza being cooked in a propane oven outside in the winter.">
-      <div class="carousel-caption d-none d-md-block">
-        <h4>Winter Pizza</h4>
-        <p>Olive, pepper, & onion pizza tastes great, even in the snowy outdoors.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="images/pepperoni-pan-pizza.jpg" class="d-block w-100" alt="Photo of a pepperoni pizza inside a cast iron pan.">
-      <div class="carousel-caption d-none d-md-block">
-        <h4>Pepperoni Pan Pizza</h4>
-        <p>Pepperoni cast iron pan pizza. Caramalized cheese crust required.</p>
+      <div class="col-md-6 text-md-end">
+        <a href="contact.html" aria-label="Contact Jim Leahy">Contact</a>
       </div>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-</main><!-- /.container -->
+</footer>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->

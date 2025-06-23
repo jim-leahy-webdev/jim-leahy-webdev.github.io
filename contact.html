@@ -3,16 +3,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Learn more about Jim Leahy, including his background in software support and his journey into web development.">
+    <meta name="description" content="Contact Jim Leahy, a software application specialist and student in web design and development.">
     <meta name="author" content="Jim Leahy">
-    <title>About: Jim Leahy</title>
+    <title>Contact: Jim Leahy</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/styles.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
 </head>
 <body class="d-flex flex-column min-vh-100">
 <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
@@ -38,10 +37,10 @@
                 <a class="nav-link" href="javascript.html">Javascript</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="about.html" aria-current="page">About</a>
+                <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
+                <a class="nav-link active" href="contact.html" aria-current="page">Contact</a>
             </li>
         </ul>
     </div>
@@ -49,9 +48,43 @@
 
 <!-- Main container with flex setup to keep nav and footer anchored in place-->
 <main id="main" role="main" class="container-fluid flex-grow-1">
-    <div id="h1">
-    </div>
-</main>
+  <h1>Contact Me</h1>
+  <p>Drop me a note below if you'd like to work with me on a project. I'm eager to learn more about your goals and projects and how I can help build a solution for you.</p>
+  <div class="contact-wrapper">
+    <form action="https://formspree.io/f/myzjpvew" method="POST">
+        <input type="hidden" name="_redirect" value="thank-you.html">
+
+        <!-- name field -->  
+        <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" name="name" id="name" placeholder="Your full name" aria-label="Name" required>
+        </div>
+
+        <!-- email field -->  
+        <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" name="email" id="email" placeholder="Your email address" aria-label="Email address" required>
+        </div>
+
+        <!-- phone field -->  
+        <div class="mb-3">
+            <label for="telInput" class="form-label">Phone</label>
+            <input type="tel" class="form-control" name="phone" id="telInput" placeholder="Your phone number" aria-label="Phone number" required>
+            <div class="invalid-feedback">
+                Please provide a valid phone number.
+            </div>
+        </div>
+
+        <!-- message field -->  
+        <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" name="message" id="message" rows="4" placeholder="Type your message here..." required></textarea>
+        </div>
+
+        <button type="submit" class="contact-btn btn-primary">Send Message</button>
+    </form>
+  </div>
+</main> 
 
 <!-- Footer -->
 <footer class="footer mt-auto py-4 w-100">
@@ -70,11 +103,9 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<!-- Custom React for this page -->
-<script type="module" src="js/about-react/index-Jo02eWIK.js"></script>
+
 </body>
 </html>

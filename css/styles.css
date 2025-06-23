@@ -1,58 +1,211 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display&display=swap');
+/* Font Import: Fira Sans and Montserrat */
 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/*GLOBAL*/
+/* Global Styles */
+
 body {
-    padding-top: 5rem;
-
+  padding-top: 5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 350;
+  font-style: normal;
+  background-color: #fef7f2;
+  color: #333333;
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: 'Playfair Display', serif;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
+h1 {
+  font-size: 2rem;
+  position: relative;
+  margin: auto;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
 
 main {
-    padding: 20px;
+  padding: 1rem;
 }
+
 main.container-fluid {
-    width: 50%;
+  width: 75%;
 }
 
 p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
-.index-ul {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.4rem;
+/* Skip to Main Styles */
+
+.visually-hidden-focusable {
+  position: absolute; 
+  width: 1px; 
+  height: 1px; 
+  overflow: hidden; 
+  clip: auto;
+  clip-path: none;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #f5f5f5;
+  color: #333333;
+  border: 2px solid #333333;
+  font-weight: bold;
+  z-index: 1000;
 }
+
+.visually-hidden-focusable:focus {
+  position: absolute;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible; 
+  clip: auto; 
+  clip-path: none;
+  margin: 0;
+}
+
+
+/* Navigation Bar Styles */
 
 nav {
-    margin-bottom: 120px;
+  margin-bottom: 120px;
 }
 
 .navbar-brand {
-    margin-left: 20px;
+  margin-left: 20px;
+  color: #a5b89f;
+  font-size: 2rem;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  padding-left: 10px;
+}
+
+.nav-item {
+  color: whitesmoke !important;
+}
+
+.nav-link {
+  color: whitesmoke !important;
+  font-size: 1.25rem;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-align: right;
+}
+
+.nav-link {
+  padding-right: 1rem;
+}
+
+.nav-link.active {
+  background-color: #a5b89f;
+  border-radius: 8px;
+  color: black;
+}
+
+.navbar-dark .nav-link.active {
+  background-color: rgba(165, 184, 159, 0.75);
+  color: black !important;
 }
 
 button.navbar-toggler{
-margin-right: 10px;
+  margin-right: 10px;
 }
 
-.home_2col {
-    margin-bottom: 20px;
+
+/* Footer Styles */
+
+footer.footer {
+  background-color: #2d2d2d !important;
+  color: #f5f5f5 !important;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-img.dibley {
-    max-width: 100%
+.footer a {
+  color: #ffffff;
+  text-decoration: underline;
 }
+
+.footer a:hover {
+  color: #a5b89f;
+  text-decoration: none;
+}
+
+/* Home Page Styles */
+
+img.leahy {
+  max-width: 100%;
+  max-height: 600px; /* prevents image from getting too tall */
+  display: block;
+  margin-left: 0;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.concepts-wrapper {
+  text-align: center;
+  padding: 1rem;
+  background-color: #a5b89fc4;
+  color: #333333;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-width: 100%;
+  margin: auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.index-ul {
+  font-weight: 600;
+  font-size: 1.0rem;
+  list-style-type: none;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  max-width: 75%;
+  text-align: center;
+  border-radius: 8px;
+  padding: 1rem 0 1rem 0;
+  margin: 0 auto; 
+  margin-bottom: 1rem;
+  }
+
+
+/* Grid Styles */
 
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, 1fr);
+  grid-gap: 5px;
+  margin: 1rem 0 1rem 0;
+}
+
+.wrapper-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: minmax(100px, auto);
   grid-gap: 5px;
 }
 
@@ -90,8 +243,7 @@ img.dibley {
   border: 1px solid black;
   color: #f5f5f5;
   background-color: #5C4F1E;
-  /*grid-column: 2/3;*/  /* These column/row settings are not needed */
-  /*grid-row: 4/5;*/
+  /* Column/row settings are not needed for this box */
   padding: 5px;
   border-radius: 5px;
 }
@@ -100,11 +252,11 @@ img.dibley {
   border: 1px solid black;
   color: #000000;
   background-color: #B17575;
-  /*grid-column: 3/4;*/  /* These column/row settings are not needed */
-  /*grid-row:4/5;*/
+  /* Column/row settings are not needed for this box */
   padding: 5px;
   border-radius: 5px;
 }
+
 .box6 {
   border: 1px solid black;
   color: black;
@@ -115,14 +267,115 @@ img.dibley {
   border-radius: 5px;
 }
 
-h1 {
-  position: relative;
-  margin: auto;
+.box-auto {
+  border: 1px solid #333333;
+  color: #333333;
+  background-color: #a5b89f;
+  padding: 5px;
+  border-radius: 5px;
 }
+
+/* Carousel Styles */
+
+.carousel-wrapper {
+  max-width: 900px;
+  margin: 0 auto;         
+  text-align: center;     
+}
+
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+  outline: 3px solid #a5b89f;
+  outline-offset: 2px;
+}
+
+.carousel-title {
+  margin-bottom: 0.5rem;
+  text-align: left;         
+  padding-left: 1rem; 
+}
+
+.carousel-subtitle {
+  margin: 0.5rem 0 0 0;
+  text-align: left;         
+  padding-left: 1rem; 
+}
+
+.carousel-paragraph {
+  text-align: left;         
+  padding-left: 1rem; 
+}
+
+#carouselExampleCaptions {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+#carouselExampleCaptions .carousel-item img {
+  max-width: 100%;
+  max-height: 600px; /* prevents image from getting too tall */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.carousel-caption {
+  display: block !important;
+  background-color: rgba(0, 0, 0, 0.5); /* improving legibility*/
+  padding: 0.75rem 1rem 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Javascript Interactivity Demo Styles */
+
+.vue-wrapper {
+  margin: 0 auto;          
+}
+
+.toggleBox-wrapper {
+  margin-top: 1rem;
+  margin-left: 0;
+  margin-right: auto;
+  text-align: center;
+  padding: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+}
+.toggleBox-wrapper.light {
+  background-color: #fef7f2;
+  color: #333333;
+}
+.toggleBox-wrapper.dark {
+  background-color: #333333;
+  color: #fef7f2;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #a5b89f;
+  color: black;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background-color: #889c7f;
+}
+
+
+/* About Styles */
 
 .about-h1 {
   position: relative;
-  margin: auto;
   margin-bottom: 1rem;
 }
 
@@ -130,7 +383,97 @@ h1 {
   margin-bottom: 1rem;
 }
 .about-p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.4rem;
-    color: black;
+  font-size: 1.2rem;
+  color: #333333;
 }
+
+.about-footnote {
+  font-size: 0.85rem;
+  color: #3c3c3c;
+  font-style: italic;
+  margin-top: 1.5rem;
+}
+
+/* Contact Styles */
+
+.contact-wrapper {
+  text-align: left;
+  padding: 1rem;
+  background-color: #a5b89fc4;
+  color: #333333;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-width: 100%;
+  margin: auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-btn {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #2d2d2d;
+  color: #f5f5f5;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.contact-btn:hover {
+  background-color: #5f5f5f;
+}
+
+/* Media Queries for smaller screen sizes */ 
+
+@media (max-width: 768px) {
+  main .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+
+  footer.footer {
+    font-size: 0.9rem;
+    padding: 1rem 0;
+  }
+}
+
+/* Carousel caption handling on smaller viewports */
+
+@media (max-width: 576px) {
+
+  .carousel-caption h3 {
+    font-size: 0.9rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.75rem;
+  }
+
+  .contact-wrapper {
+    padding: 1rem 0.75rem;
+  }
+
+  .contact-btn {
+    width: 100%;
+  }
+}
+
